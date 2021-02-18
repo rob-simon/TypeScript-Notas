@@ -13,6 +13,9 @@
 * [Funciones](#funciones)
   * [Funciones declaradas con una flecha](#funciones-declaradas-con-una-flecha)
   * [Parámetros con valor por defecto](#parámetros-con-valor-por-defecto)
+* [Clases](#Clases)
+  * [Herencia de clases](#herencia-de-clases)
+  * [Getters y Setters](#getters-y-setters)
 * [Conocimientos extra](#conocimientos-extra)
 
 ## Instalación TypeScript
