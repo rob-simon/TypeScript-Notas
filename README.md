@@ -284,6 +284,26 @@ const countDown = (start: number = 10): void => {
 }
 ```
 
+## Clases
+De la misma forma que trabajamos en otros lenguajes con programación orientada a objetos, aquí también es posible, aquí vamosa ver como crear clases y como asignarle sus propiedades públicas; por defecto, privadas y protegidas.
+
+```typescript
+class Person {
+  name: string;
+  private type: string;
+  protected age: number;
+  
+  // aquí vemos como podemos definir una propiedad más del objeto directamente en el contructor.
+  constructor(name: string, public username: string) { 
+    this.name = name;
+  }
+}
+
+const person = new Person("Max", "max");
+console.log(person);
+console.log(person.name, person.username);
+```
+
 ## Conocimientos extra
 La extensión de los ficheros de Typescript es “.ts”, pero como el navegador no sabe interpretar typescript, cuando se importe un archivo “.ts” en nuestro código HTML lo llamaremos como si fuese Javascript:
 ```html
