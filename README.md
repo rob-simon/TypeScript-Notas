@@ -291,17 +291,30 @@ De la misma forma que trabajamos en otros lenguajes con programación orientada 
 class Person {
   name: string;
   private type: string;
-  protected age: number;
+  protected age: number = 25;
   
   // aquí vemos como podemos definir una propiedad más del objeto directamente en el contructor.
   constructor(name: string, public username: string) { 
     this.name = name;
+  }
+  
+  //si creamos una función privada, no será accesible fuera de la clase, pero sí dentro de la misma
+  private printAge() {
+    console.log(this.age)
+  }
+  
+  setType(type: string) {
+    this.type = type;
+    console.log(this.type);
+    printAge(); // podemos llamar a la función privada
   }
 }
 
 const person = new Person("Max", "max");
 console.log(person);
 console.log(person.name, person.username);
+// person.printAge(); // Error al llamar un método privado
+person.setType("Cool");
 ```
 
 ## Conocimientos extra
