@@ -16,7 +16,7 @@
 * [Clases](#Clases)
   * [Herencia de clases](#herencia-de-clases)
   * [Getters y Setters](#getters-y-setters)
-  * [Propiedades y métodos estáticos]()
+  * [Propiedades y métodos estáticos](#propiedades-y-métodos-estáticos)
 * [Conocimientos extra](#conocimientos-extra)
 
 ## Instalación TypeScript
