@@ -16,6 +16,7 @@
 * [Clases](#Clases)
   * [Herencia de clases](#herencia-de-clases)
   * [Getters y Setters](#getters-y-setters)
+  * [Propiedades y métodos estáticos]()
 * [Conocimientos extra](#conocimientos-extra)
 
 ## Instalación TypeScript
@@ -341,6 +342,46 @@ const max = new Max("max");
 console.log(max);
 ```
 
+  ### Getters y Setters
+  Vamos a ver como definir los getters y setters de nuestra clase, para que se pueda acceder a las propiedades que necesitemos.
+  ```typescript
+  //Getters & Setters
+  class Plant {
+    private _species: string = "Default";
+    
+    get species() {
+      return this._species;
+    }
+    
+    set species(value: string) {
+      if (value.length > 3) {
+        this._species = value;
+      } else {
+        this._species = "Default";
+      }
+    }
+  }
+  
+  let platn = new Plant();
+  console.log(plant.species);
+  plant.species = "AB";
+  console.log(plant.species);
+  plant.species = "Green Plant";
+  console.log(plant.species);
+  ```
+
+  ### Propiedades y métodos estáticos
+  En algún caso nos puede interesar crear clases estáticas, las cuales no necesitemos instanciar para acceder a ellas. Eso también es posible aquí:
+  ```typescript
+  class Helpers {
+    static PI: number = 3.14;
+    static calcCircumference(diameter: number): number {
+      return this.PI * diameter;
+    }
+  }
+  console.log(2 * Helpers.PI);
+  console.log(Helpers.calcCircumference(8))
+  ```
 
 ## Conocimientos extra
 La extensión de los ficheros de Typescript es “.ts”, pero como el navegador no sabe interpretar typescript, cuando se importe un archivo “.ts” en nuestro código HTML lo llamaremos como si fuese Javascript:
