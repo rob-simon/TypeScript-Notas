@@ -320,10 +320,22 @@ person.setType("Cool");
   ### Herencia de clases
 Otra de las características que tenemos es la de poder heredar una clase utilizando la función extends al crear nuestra clase y especificarle de quien debe heredar.
 ```typescript
-//Herencia - como vemos aquí, es posible llamar la propiedad de Person dentro de la clase Max añadiendo la extensión de Person a nuestra clase.
+//Herencia - como vemos aquí, es posible llamar la propiedad de Person dentro de la clase Max 
+// añadiendo la extensión de Person a nuestra clase.
 class Max extends Person {
-  name = "Max"
+  //name = "Max";
+  
+  // A la hora de definir el constructor, llámamos a super para hacer referencia al constructor de la clase heredada
+  constructor(username: string) {
+    super("Max", username);
+    // veamos como podemos acceder a la propiedad heredada Age
+    this. age = 31;
+    // pero no podemos acceder a la propiedad heredada type, por ser privada, por lo que solo es accesible desde la clase heredada
+  }
 }
+
+const max = new Max("max");
+console.log(max);
 ```
 
 
