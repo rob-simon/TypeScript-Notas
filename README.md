@@ -169,7 +169,7 @@ tet canBeNull: number | null = 12;
 canBeNull = null;
 ```
 
-### Reestructuración de un Array
+  ### Reestructuración de un Array
 Para reasignar las posiciones de un array dentro de variables independientes lo realizaremos de esta forma:
 ```typescript
 const myHobbies = ["Cooking", "Sports"];
@@ -177,7 +177,7 @@ const [hobby1, hobby2] = myHobbies; // esta asignación colocará cada posición
 console.log(hobby1, hobby2); // de esta forma podemos llamar cada posición con el nombre de la variable que tenga asignado.
 ```
 
-### Reestructuración de un Objeto
+  ### Reestructuración de un Objeto
 De la misma forma que hemos reaisgnado los valores de un array en el ejemplo anterior, con los objetos funcionaría de una forma muy similar.
 ```typescript
 const userData = [userName: "Max", age: 25];
@@ -190,7 +190,7 @@ const [userName: myName, age: myAge] = userData; // como las propiedades de un o
 console.log(myName, myAge);
 ```
 
-### Template de texto
+  ### Template de texto
 Vamos a ver como crear un template de multilínea y como se le concatenan variables. Para crear el template usaremos las comillas simples invertidas ``. Para asignar una variable utilizaremos el signo del dolar seguido de llaves. ${}
 ```typescript
 const userName = "Max";
@@ -200,7 +200,7 @@ This is cool!`;
 console.log(greeting);
 ```
 
-### Operador Spread y Rest
+  ### Operador Spread y Rest
 Una forma de pasar multiples argumentos utilizando un array sería la siguiente.
 ```typescript
 // Spread
@@ -249,7 +249,7 @@ function calcula(value1: number, value2: number): number {
 }
 ```
 
-### Funciones declaradas con una flecha
+  ### Funciones declaradas con una flecha
 Otra forma de declarar las funciones; si vamosa asignar su valor a una variable/constante, sería utilizando la flecha de la siguiente forma:
 ```typescript
 //si nuestra función únicamente va tener una línea de código, podemos definirlo todo en la misma línea
@@ -271,7 +271,7 @@ console.log(unParam(2)); // Pintaría por consola -> 4
 const saludo = () => console.log("Hello!");
 ```
 
-### Parámetros con valor por defecto
+  ### Parámetros con valor por defecto
 Podemos asignar un valor por defecto en los argumentos de una función.
 ```typescript
 //Default parameter
@@ -316,6 +316,16 @@ console.log(person.name, person.username);
 // person.printAge(); // Error al llamar un método privado
 person.setType("Cool");
 ```
+
+  ### Herencia de clases
+Otra de las características que tenemos es la de poder heredar una clase utilizando la función extends al crear nuestra clase y especificarle de quien debe heredar.
+```typescript
+//Herencia - como vemos aquí, es posible llamar la propiedad de Person dentro de la clase Max añadiendo la extensión de Person a nuestra clase.
+class Max extends Person {
+  name = "Max"
+}
+```
+
 
 ## Conocimientos extra
 La extensión de los ficheros de Typescript es “.ts”, pero como el navegador no sabe interpretar typescript, cuando se importe un archivo “.ts” en nuestro código HTML lo llamaremos como si fuese Javascript:
