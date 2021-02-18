@@ -17,6 +17,7 @@
   * [Herencia de clases](#herencia-de-clases)
   * [Getters y Setters](#getters-y-setters)
   * [Propiedades y métodos estáticos](#propiedades-y-métodos-estáticos)
+  * [Clases Abstractas](#clases-abstractas)
 * [Conocimientos extra](#conocimientos-extra)
 
 ## Instalación TypeScript
@@ -362,7 +363,7 @@ console.log(max);
     }
   }
   
-  let platn = new Plant();
+  let plant = new Plant();
   console.log(plant.species);
   plant.species = "AB";
   console.log(plant.species);
@@ -381,6 +382,34 @@ console.log(max);
   }
   console.log(2 * Helpers.PI);
   console.log(Helpers.calcCircumference(8))
+  ```
+  
+  ### Clases Abstractas
+  También es crear clases abstractas.
+  ```typescript
+  //Abstract Classes
+  abstract class Project {
+    projectName: string = "Default";
+    budget: number;
+    
+    abstract changeName(name: string): void;
+    
+    calcBudged() {
+      return this.budget * 2;
+    }
+  }
+  
+  class ITProject extends Project {
+    // como la clase abstracta tiene definida la función changeName, es necesario implementarla en la clase que la hereda.
+    changeName(name: string): void {
+      this.projectName = name;
+    }
+  }
+  
+  let newProject = new IRProject();
+  console.log(newProject);
+  newProject.changeName("Final Project");
+  console.log(newProject);
   ```
 
 ## Conocimientos extra
