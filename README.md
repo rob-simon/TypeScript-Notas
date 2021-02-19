@@ -18,6 +18,7 @@
   * [Getters y Setters](#getters-y-setters)
   * [Propiedades y métodos estáticos](#propiedades-y-métodos-estáticos)
   * [Clases Abstractas](#clases-abstractas)
+* [Namespace](#namespace)
 * [Conocimientos extra](#conocimientos-extra)
 
 ## Instalación TypeScript
