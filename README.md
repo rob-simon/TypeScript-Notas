@@ -424,6 +424,31 @@ console.log(max);
     }
   ```
 
+## Namespace
+Es posible que necesitemos utilizar el mismo nombre de una función en diferentes puntos, esto provocaría un error al duplicar el nombre, pero con los Namespace podemos conseguir eso.
+```typescript
+namespace MyMath {
+  const PI = 3.14;
+  
+  // para que la función sea visible fuera del namespace es necesario añadirle el export, en caso contrario no sería visible.
+  export function calculateCircumference(diameter: number) {
+    return diameter * PI;
+  }
+  
+  export function calculateRectangle(width: number, length: number) {
+    return width * length;
+  }
+}
+
+// comprobamos como podemos crear una variable con el mismo nombre ya que está fuera del namespace
+const PI = 2.99;
+// a la hora de llamar a las funciones o variables que hayamos creado en nuestro namespace deberemos hacerlo añadiendo el namespace antes de la función que queramos llamar.
+console.log(MyMath.calculateRectangle(10, 20));
+console.log(MyMath.calculateCircumference(3))
+;
+console.log(PI);
+```
+
 ## Conocimientos extra
 La extensión de los ficheros de Typescript es “.ts”, pero como el navegador no sabe interpretar typescript, cuando se importe un archivo “.ts” en nuestro código HTML lo llamaremos como si fuese Javascript:
 ```html
