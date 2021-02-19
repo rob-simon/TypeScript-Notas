@@ -411,6 +411,18 @@ console.log(max);
   newProject.changeName("Final Project");
   console.log(newProject);
   ```
+  
+  ### Declaración variables de solo lectura
+  Para declara una variable como solo lectura, lo único que tenemos que hacer es añadir la propiedad readonly en la declaración de nuestra variable.
+  ```typescript
+    class OnlyOne {
+      public readonly name: string;
+      
+      private constructor(name: string) {
+        this.name = name;
+      }
+    }
+  ```
 
 ## Conocimientos extra
 La extensión de los ficheros de Typescript es “.ts”, pero como el navegador no sabe interpretar typescript, cuando se importe un archivo “.ts” en nuestro código HTML lo llamaremos como si fuese Javascript:
